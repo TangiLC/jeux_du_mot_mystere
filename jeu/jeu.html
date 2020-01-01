@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Le Garage, le jeu</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./public/jeu.css">
+    </head>
+
+    <body><div id="page">
+        <div id="entete">
+            <h1>Le Garage, le jeu</h1>
+            <p><a href="index.html">Retour à l'accueil</a></p>
+        </div>
+
+        <div id="regles">
+            <p>Retrouvez toutes les lettres du mot mystère en moins de 7 coups.</p>
+            <p>Pour démarrer la partie cliquez sur "Nouveau jeu".</p>
+        </div>
+
+        <div id="air_de_jeu">
+            <p>
+                <input type="text" id="lettre0" class="aTrouver" size="1"/>
+                <input type="text" id="lettre1" class="aTrouver" size="1"/>
+                <input type="text" id="lettre2" class="aTrouver" size="1"/>
+                <input type="text" id="lettre3" class="aTrouver" size="1"/>
+                <input type="text" id="lettre4" class="aTrouver" size="1"/>
+                <input type="text" id="lettre5" class="aTrouver" size="1"/>
+                <input type="text" id="lettre6" class="aTrouver" size="1"/>
+            </p>
+            <p>
+                    <button id="jeu">Nouveau Jeu</button>
+            </p>
+        </div>
+
+        <div id="visu">
+                <img id="affichage" src="./public/jeu00.png" alt="début"/>
+        </div>
+
+        <div id="reponse">
+            <button id="fin">Voir la solution</button>
+            <p id="message"></p>
+        </div>
+
+        <script src="./public/jeu.js"></script>
+    </div></body>
+</html>
