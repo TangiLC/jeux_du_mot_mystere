@@ -1,5 +1,5 @@
 # Atelier jeu web par le Garage
-Le Garage vous propose, pour cet atelier de découverte du web, de développer un jeu web. 
+Le Garage vous propose, pour cet atelier de découverte du développement, de créer un jeu web. 
 
 ![le jeu](ressources/jeu_web.png)
 
