@@ -1,5 +1,9 @@
 # Atelier jeu web par le Garage
-Projet pour la journée d'initiation le Garage
+Le Garage vous propose, pour cet atelier de découverte du web, de développer un jeu web. 
+
+![le jeu](ressources/jeu_web.png)
+
+Le principe est simple : découvrir toutes les lettres d'un mot mystère en faisant moins de 7 erreurs.
 
 Ce Projet a pour but de vous initier au développement web avec du code HTML/CSS/JS.
 
