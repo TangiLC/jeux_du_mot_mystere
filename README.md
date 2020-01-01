@@ -7,6 +7,8 @@ Le principe est simple : découvrir toutes les lettres d'un mot mystère en fais
 
 L'ensemble du code et des instructions sont sur Github, un outil collaboratif de gestion de versions très utilisé en développement.
 
+Un autre outil qui pourra vous être util, c'est un éditeur de code. Vous pouvez télécharger [Visual Studio Code](https://code.visualstudio.com/) pour cet atelier. C'est une véritable aide pour écrire du code lisible.
+
 Cet atelier a pour but de vous initier au développement web avec du code HTML/CSS/JS.
 
 C'est du code client, c'est à dire des langages interprétés par votre navigateur pour afficher une page web.
