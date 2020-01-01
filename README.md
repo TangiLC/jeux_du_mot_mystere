@@ -1,4 +1,4 @@
-# Le jeu du Pendu par vous-même
+# Votre premier jeu web
 
 BRAVO, vous êtes arrivé au bout de l'atelier. 
 
