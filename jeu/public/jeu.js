@@ -11,7 +11,7 @@ var solution = "Demandez un nouveau jeu"
 var etape = 0
 var bravo = 0
 //var mots = "garage"
-var mots=["garage", "hacker", "bifide", "bonsai", "cheval"]
+var mots=["svelte", "hacker", "bifide", "bonsai", "cheval"]
 
 /* déclaration des fonctions */
 
