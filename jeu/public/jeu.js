@@ -1,5 +1,6 @@
 
 /* sélection des éléments de la page pour travailler avec */
+
 var airDeJeu = document.getElementById("air_de_jeu")
 //inputs contient tous les élements html de class 'aTrouver'
 //inputs est un tableau qui contient plusieurs valeurs
@@ -21,6 +22,7 @@ var bravo = 0
 //var mots = "garage"
 //liste des mots à trouver, un est tiré au hasard
 var mots=[]
+
 
 /* déclaration des fonctions */
 const SPARKLE_COUNT = 50;
@@ -113,6 +115,7 @@ function getNiveau(){
 }
 
 //fonction pour activer ou desactiver les champs de saisie
+
 //ok=false
 function desactiver(nodes, ok){
     //couleur de dégrisage
@@ -142,6 +145,7 @@ function desactiver(nodes, ok){
         nodes[i].setAttribute("style", style)
         //bloque la saisie
         //disabled = false
+
         nodes[i].disabled = ok
     }
 }
@@ -160,6 +164,7 @@ function gagner(nodes, solution){
 
 //fonction pour mettre à jour la page web lorsque le mot n'est pas trouvé
 function perdre(nodes, solution){
+
     desactiver(nodes, true)
     message.innerHTML = solution
     affichage.src = "./public/jeu07.png"
@@ -188,9 +193,11 @@ mots=mots_par_niveau[niveau]
 desactiver(inputs, true)
 message.innerHTML = solution
 
+
 /* évènements */
 
 //Click sur le bouton 'nouveau jeu'
+
 jeu.addEventListener("click", function(){
     //solution = mots
     var max = mots.length
@@ -219,6 +226,7 @@ confettiButton.addEventListener("click", function(){
 fin.addEventListener("click", function(){
     perdre(inputs, solution)
 })
+
 
 //saisie dans un champs texte
 const guessLength=()=>{
@@ -274,3 +282,4 @@ for (var i = 0; i < inputs.length; i++) {
         }
     })
 }
+
