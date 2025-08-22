@@ -99,14 +99,23 @@ class WordGame {
   }
 
   handleLetterInput(inputElement) {
-    inputElement.value = inputElement.value.toUpperCase();
+    // Nettoyer les classes CSS dès qu'on modifie la lettre
+    inputElement.classList.remove("bonnePlace", "mauvaisePlace", "mauvaiseLettre");
     
-    // Ne faire la vérification que si toutes les cases sont complétées
-    if (this.guessLength() < this.niveau) return;
+    // Mise en majuscules
+    inputElement.value = inputElement.value.toUpperCase();
+  }
+
+  // Nouvelle méthode pour vérifier le mot complet
+  verifierMot() {
+    // Vérifier que toutes les cases sont complétées
+    if (this.guessLength() < this.niveau) {
+      alert("Veuillez compléter tous les champs !");
+      return;
+    }
     
     // Vérifier TOUTES les lettres du mot complet
     this.bravo = 0; // Reset du compteur
-    let motCorrect = true;
     
     for (let i = 0; i < this.niveau; i++) {
       const input = this.inputs[i];
@@ -120,7 +129,6 @@ class WordGame {
         this.bravo++;
         input.classList.add("bonnePlace");
       } else {
-        motCorrect = false;
         if (this.solution.toLowerCase().includes(saisie.toLowerCase())) {
           input.classList.add("mauvaisePlace");
         } else {
@@ -129,7 +137,7 @@ class WordGame {
       }
     }
 
-    console.log("Guess complet:", this.getCurrentWord(), "Bravo:", this.bravo);
+    console.log("Mot soumis:", this.getCurrentWord(), "Bonnes lettres:", this.bravo);
     
     // Vérifier victoire
     if (this.bravo === this.niveau) {
@@ -172,12 +180,27 @@ class WordGame {
       this.perdre(this.inputs, this.solution);
     });
 
-    // Gestionnaires pour les champs de saisie
+    // Bouton submit (à ajouter dans le HTML)
+    const submitButton = document.getElementById("submit");
+    if (submitButton) {
+      submitButton.addEventListener("click", () => {
+        this.verifierMot();
+      });
+    }
+
+    // Gestionnaires pour les champs de saisie (seulement pour la mise en majuscules)
     for (let i = 0; i < this.inputs.length; i++) {
       this.inputs[i].addEventListener("change", (event) => {
         this.handleLetterInput(event.target);
       });
     }
+
+    // Optionnel : permettre la soumission avec la touche Entrée
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        this.verifierMot();
+      }
+    });
   }
 }
 
